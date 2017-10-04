@@ -4,7 +4,7 @@
 # or whitespace (' ').
 class EmailParser
 
-  attr_accessor :email, :parser
+  attr_accessor :csvemail, :parser
   @@all= []
 
    def save
@@ -15,8 +15,16 @@ class EmailParser
     @@all
     end
 
-  def parse
+  def self.parse(csvemails)
+    
+    data= file_name.split (" - ")
+    artist_name = data[0]
+    name = data[1].gsub!(".mp3", "")
 
-
+    song = self.new
+    song.name = name
+    song.artist_name = artist_name
+    song
+    end
   end
 end
