@@ -16,15 +16,13 @@ class EmailParser
     end
 
   def self.parse(csvemails)
-    
-    data= file_name.split (" - ")
-    artist_name = data[0]
-    name = data[1].gsub!(".mp3", "")
 
-    song = self.new
-    song.name = name
-    song.artist_name = artist_name
+    data= csvemails.split (" - ")
+    csvemails = data[0]
+    parser =
+    email = self.new
+    email.csvemails = cvsemails
+    email.parser = parser
     song
     end
-  end
 end
