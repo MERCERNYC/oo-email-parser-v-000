@@ -4,25 +4,25 @@
 # or whitespace (' ').
 class EmailParser
 
-  attr_accessor :csvemail, :parser
+  attr_accessor :email
+  
   @@all= []
+  @@email=[]
 
-   def save
-     self.class.all << self
-  end
+def self.all
+  @@all
+end 
 
-  def self.all
-    @@all
-    end
+def save
+  self.class.all <<self
+end 
 
-  def self.parse(csvemails)
+def initialize(email)
+  @email = email
+end 
 
-    data= csvemails.split (" - ")
-    csvemails = data[0]
-    parser =
-    email = self.new
-    email.csvemails = cvsemails
-    email.parser = parser
-    song
+def self.parse(emails)
+    cvs=emails.split./,\s*\
+    cvs
     end
 end
