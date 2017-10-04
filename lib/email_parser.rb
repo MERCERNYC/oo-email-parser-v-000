@@ -7,7 +7,7 @@ class EmailParser
   attr_accessor :email
 
   @@all= [] #class variable
-  
+
 
   def self.all # class reader
   @@all
@@ -19,7 +19,7 @@ class EmailParser
   end
 
   def parse
-    csv = @emails.split(/\,\s|\s/) #separated with spaces *or* separated with commas
+    csv = @emails.split(/\,\s|\s/) #separated with spaces *or* (| regex for or) separated with commas
     csv.uniq
   end
 end
