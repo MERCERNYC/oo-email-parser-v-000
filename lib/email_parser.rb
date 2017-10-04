@@ -17,8 +17,8 @@ class EmailParser
   @@all << self
   end
 
-  def self.parse(emails)
-    cvs=@emails.split.(/\,\s|\s\)
-    cvs.unique!
-  end
+  def parse
+    csv = @emails.split(/\,\s|\s/)
+    csv.uniq
+  end 
 end
