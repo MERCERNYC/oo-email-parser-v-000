@@ -6,10 +6,9 @@ class EmailParser
 
   attr_accessor :email
 
-  @@all= [] #class variable 
-  @@email=[]
+  @@all= [] #class variable
 
-def self.all # class reader 
+def self.all # class reader
   @@all
 end
 
@@ -17,12 +16,12 @@ def save
   self.class.all <<self
 end
 
-def initialize(email)# accepts a string 
+def initialize(email)# accepts a string
   @email = email
 end
 
 def self.parse(emails)
-    cvs=emails.split./,\s*\
+    cvs=emails.split.[/,\s*\]
     cvs.unique!
     end
 end
