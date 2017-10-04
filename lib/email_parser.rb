@@ -18,7 +18,7 @@ class EmailParser
   end
 
   def self.parse(emails)
-    cvs=emails.split.[/,\s*\]
-    cvs.unique! 
+    cvs=emails.split.\,\s|\s
+    cvs.unique!
   end
 end
