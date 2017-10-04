@@ -19,7 +19,7 @@ class EmailParser
   end
 
   def parse
-    csv = @emails.split(/\,\s|\S/) #separated with spaces *or* (| regex for or) separated with commas
+    csv = @emails.split(/\,\s|\s/) #separated with spaces *or* (| regex for or) separated with commas
     csv.uniq
   end
 end
