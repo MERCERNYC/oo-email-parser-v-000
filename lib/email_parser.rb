@@ -23,6 +23,6 @@ end
 
 def self.parse(emails)
     cvs=emails.split./,\s*\
-    cvs.unique
+    cvs.unique!
     end
 end
