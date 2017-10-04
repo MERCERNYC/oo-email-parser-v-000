@@ -7,6 +7,7 @@ class EmailParser
   attr_accessor :email
 
   @@all= [] #class variable
+  @@emails=[]
 
   def self.all # class reader
   @@all
