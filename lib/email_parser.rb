@@ -8,20 +8,17 @@ class EmailParser
 
   @@all= [] #class variable
 
-def self.all # class reader
+  def self.all # class reader
   @@all
-end
+  end
 
-def save
-  self.class.all <<self
-end
-
-def initialize(email)# accepts a string
+  def initialize(email)# accepts a string
   @email = email
-end
+  @@all << self
+  end
 
-def self.parse(emails)
+  def self.parse(emails)
     cvs=emails.split.[/,\s*\]
-    cvs.unique!
-    end
+    cvs.unique! 
+  end
 end
