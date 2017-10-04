@@ -15,13 +15,14 @@ class EmailParser
 
 def save
   self.class.all <<self
-end 
+end
 
 def self.create
   emails = self.new
   emails.save
   emails
-end 
+  @@all << self
+end
   # def initialize(emails)# accepts a string
   # @emails = emails
   # @@all << self
