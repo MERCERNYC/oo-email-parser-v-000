@@ -13,13 +13,13 @@ class EmailParser
   @@all
   end
 
-  def initialize(email)# accepts a string
-  @email = email
+  def initialize(emails)# accepts a string
+  @emails = emails
   @@all << self
   end
 
   def parse
     csv = @emails.split(/\,\s|\s/)
     csv.uniq
-  end 
+  end
 end
