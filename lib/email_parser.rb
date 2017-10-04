@@ -13,10 +13,19 @@ class EmailParser
   @@all
   end
 
-  def initialize(emails)# accepts a string
-  @emails = emails
-  @@all << self
-  end
+def save
+  self.class.all <<self
+end 
+
+def self.create
+  emails = self.new
+  emails.save
+  emails
+end 
+  # def initialize(emails)# accepts a string
+  # @emails = emails
+  # @@all << self
+  # end
 
   def parse
     csv = @emails.split(/\,\s|\s/)
